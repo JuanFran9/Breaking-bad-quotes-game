@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breaking Bad Quote Game</title>
+</head>
+<body>
+    <h1>Guess the Author of the Quote</h1>
+    <h2>"<%= quote %>"</h2>
+    <form action="/guess" method="post">
+        <input type="text" name="authorGuess" placeholder="Enter author's name">
+        <input type="hidden" name="actualAuthor" value="<%= author %>">
+        <button type="submit">Guess</button>
+    </form>
+</body>
+</html>
