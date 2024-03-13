@@ -1,0 +1,43 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    color: #007BFF;
+}
+
+blockquote {
+    margin: 20px 0; 
+    font-style: italic;
+}
+
+form {
+    margin: 10px;
+}
+
+button {
+    background-color: #28A745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+img {
+    width: 100px;
+    height: auto;
+    margin: 5px;
+}

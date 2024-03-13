@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Breaking Bad Quote Game</title>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
     <h1>Guess the Author of the Quote</h1>
-    <h2>"<%= quote %>"</h2>
-    <form action="/guess" method="post">
-        <input type="text" name="authorGuess" placeholder="Enter author's name">
-        <input type="hidden" name="actualAuthor" value="<%= author %>">
-        <button type="submit">Guess</button>
-    </form>
+    <blockquote>"<%= quote %>"</blockquote>
+    
+    <div>
+        <% characters.forEach(function(character) { %>
+            <form action="/guess" method="post" style="display:inline;">
+                <input type="hidden" name="authorGuess" value="<%= character.name %>">
+                <button type="submit" style="background:none;border:none;padding:0;">
+                    <img src="<%= character.img %>" alt="<%= character.name %>" title="<%= character.name %>" style="width:100px;height:auto;">
+                </button>
+            </form>
+        <% }); %>
+    </div>
+    <p><%= message %></p>
 </body>
 </html>
